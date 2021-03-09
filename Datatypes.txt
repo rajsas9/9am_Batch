@@ -1,0 +1,85 @@
+***********Numbers***********
+Numbers - int -1,2,3,4,5,6
+          Float -1.2,3.4,5.6
+          Long(l,L) ->123456789
+          Complex -x+4y
+
+Datatype
+Type()
+print()
+************Stings*****************
+' '
+" "
+1 2 3 4 5 6 7 8 9
+H Y D E R A B A D
+0 1 2 3 4 5 6 7 8
+             -2 -1
+************List*****************
+List -> Mutable-> Modify, Update,edit
+
+List -> []
+
+List ->Numeric, Character, Both numeric and character
+
+Apply functions on lists
+
+List -> Single dimentional
+
+[1 2 3 4 5 6 7]
+ 0 1 2 3 4 5 6
+          -2 -1 
+
+Two or more dimentional
+[1 2],[3 4],[5 6]
+ 0 1   0 1   0 1
+  0     1     2
+************Tuple******************
+Tuple ->()
+Tuple -> Immutable- Cannot update
+Tuple ->Numeric, Character, Both numeric and character
+
+Apply functions on Tuples
+
+Tuples-> Single dimentional
+
+[1 2 3 4 5 6 7]
+ 0 1 2 3 4 5 6
+          -2 -1 
+
+Two or more dimentional
+[1 2],[3 4],[5 6]
+ 0 1   0 1   0 1
+  0     1     2
+**************Dict**************
+Dictionary ->Represented with {}
+Dictionary ->Numeric, Character, Both numeric and character
+{Keys:value,} -> Items
+{'Name':'Rick','age':23}
+{'Name':['Rick','Abhi'],'age':[23,45]}
+
+Apply functions on Dictionary 
+
+**************Sets******************
+Sets->Represented with {}
+Sets->Numeric, Character, Both numeric and character
+
+Types of sets:
+--------------
+Normal sets -Mutable
+Frozen sets -Immutable
+
+Sets -> Automatically removes duplicates 
+Sets -> Automatically Sort in assending order
+
+Sets -> 
+Union -> Symbol(|) AUB -> All the records from set A and Set B
+Intersection -> Symbol(&) -> Common records from set A and Set B
+Diff -> symbol(-)  A-B
+Symmetric diff -> symbol(^)
+
+Sets -> Functions 
+
+************************************
+
+
+
