@@ -86,6 +86,100 @@ time_string = time.strftime("%m/%d/%Y, %H:%M:%S", named_tuple)
 
 print(time_string)
 
+#######################################################################
+'''
+A date in Python is not a data type of its own, but we can import a module named datetime 
+to work with dates as date objects.
+
+Directive	Description	                   Example	
+%a	        Weekday, short version	         Wed	
+%A	Weekday, full version	                 Wednesday	
+%w	Weekday as a number 0-6, 0 is Sunday	   3	
+%d	Day of month 01-31	                     31	
+%b	Month name, short version	             Dec	
+%B	Month name, full version	            December	
+%m	Month as a number 01-12	                12	
+%y	Year, short version, without century	18	
+%Y	Year, full version	                    2018	
+%H	Hour 00-23	                            17	
+%I	Hour 00-12	                            05	
+%p	AM/PM	                                PM	
+%M	Minute 00-59	                        41	
+%S	Second 00-59	                        08	
+%f	Microsecond 000000-999999	            548513	
+%z	UTC offset	                            +0100	
+%Z	Timezone	                            CST	
+%j	Day number of year 001-366	            365	
+%U	Week number of year, Sunday as the first day of week, 00-53	52	
+%W	Week number of year, Monday as the first day of week, 00-53	52	
+%c	Local version of date and time	        Mon Dec 31 17:41:00 2018	
+%x	Local version of date	                12/31/18	
+%X	Local version of time	                17:41:00	
+%%	A % character	                        %
+'''
+import datetime
+print(dir(datetime))
+############Get Current Date and Time#################
+x = datetime.datetime.now()
+print(x)
+#The output date contains year, month, day, hour, minute, second, and microsecond.
+print(x.year)
+###############Get Current Date#######################
+#today() method defined in the date class to get a date object containing the current local date.
+x  = datetime.date.today()
+print(x)
+#objects into readable strings.
+print(x.strftime("%A"))
+
+
+
+x = datetime.datetime(2020, 5, 17) #(hour, minute, second, microsecond, tzone),default value of 0, (None for timezone)
+print(x)
+print(x.strftime("%B"))
+
+from datetime import datetime
+# datetime(year, month, day, hour, minute, second, microsecond)
+b = datetime(2017, 11, 28, 23, 55, 59, 342380)
+print(b) 
+
+a = datetime(2017, 11, 28, 23, 55, 59, 342380)
+print("year =", a.year)
+print("month =", a.month)
+print("hour =", a.hour)
+print("minute =", a.minute)
+print("timestamp =", a.timestamp())
+
+###############Difference between two dates and times##################
+from datetime import datetime, date
+
+t1 = date(year = 2018, month = 7, day = 12)
+t2 = date(year = 2017, month = 12, day = 23)
+t3 = t1 - t2
+print("t3 =", t3)
+
+t4 = datetime(year = 2018, month = 7, day = 12, hour = 7, minute = 9, second = 33)
+t5 = datetime(year = 2019, month = 6, day = 10, hour = 5, minute = 55, second = 13)
+t6 = t4 - t5
+print("t6 =", t6)
+
+print("type of t3 =", type(t3)) 
+print("type of t6 =", type(t6))  
+###################Handling timezone#####################
+
+from datetime import datetime
+import pytz
+
+local = datetime.now()
+print("Local:", local.strftime("%m/%d/%Y, %H:%M:%S"))
+
+
+tz_NY = pytz.timezone('America/New_York') 
+datetime_NY = datetime.now(tz_NY)
+print("NY:", datetime_NY.strftime("%m/%d/%Y, %H:%M:%S"))
+
+tz_London = pytz.timezone('Europe/London')
+datetime_London = datetime.now(tz_London)
+print("London:", datetime_London.strftime("%m/%d/%Y, %H:%M:%S"))
 
 
 #*********************CALENDER******************************
